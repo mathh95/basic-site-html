@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>MHG Hotels</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="script/script.js"></script>
+</head>
+<body>
+ 	<section id="header">
+ 		<header>
+			<nav id="menu_direita">
+						<label for="busca"><b>Busca:</b> </label>
+						<input id="busca" type="search" placeholder="Digite sua busca"></input>
+						<input type="submit" value="Buscar"></input>
+
+				<a href="index.html">  | Home |</a>
+				<a href="index2.html"> Quem Somos? |</a>
+				<a href="#"><b> Faça já sua reserva</b></a>	
+					
+				
+					
+				
+
+				<div id="menu_esquerda">
+					 <img id="logo" src="images/logo.png">
+				</div>
+			</nav>
+		</header>
+ 	</section>
+ 	<br>
+ 	
+<fieldset>
+	<legend><font color="blue" size="5">Dados Pessoais</font></legend>
+	<table>
+		<tr>
+			<td>Nome: </td>
+
+			<td><input type="text" name="nome"></input></td>
+
+			<td>Sobrenome:</td>
+
+			<td><input type="text" name="sobrenome"></input></td>
+		</tr>
+
+			
+		<tr>
+			<td>
+				RG:
+			</td>
+				<td>
+				<input type="text" name="rg" size="8"></input>
+				</td>
+		</tr>
+		<tr>
+			<td>
+				CPF:
+			</td>
+
+			<td>
+				<input type="text" name="cpf" size="7"> -</input>
+				<input type="text" name="cpf2" size="3"></input>
+			</td>
+		</tr>
+		<tr>
+			<td>E-mail: </td>
+			<td><input type="text" name="email" placeholder="Ex: mhghotels@mhg.com"></input></td>
+		</tr>
+		
+
+
+
+
+	</table>
+</fieldset>
+<br>
+<br>
+<fieldset>
+	<legend><font color="blue" size="5">Informações sobre o usuário</font></legend>
+	<table>
+		
+		
+
+		<tr>
+			<td>Login de usuário: </td>
+			<td><input type="text" name="login"></input></td>
+		</tr>
+
+		<tr>
+			<td>Senha:</td>
+			<td><input type="password" name="senha" placeholder="Ao digitar não deve exibir a senha"></input></td>
+		</tr>
+
+		<tr>
+			<td>Confirme a Senha:</td>
+			<td><input type="password" name="senha2" placeholder="Ao digitar não deve exibir a senha"></input></td>
+		</tr>
+	</table>	
+</fieldset>
+<br>
+<br>
+<fieldset>
+	<legend><font color="blue" size="5">Informações sobre a Compra</font></legend>
+	<table>
+	<tr>
+		<td>
+			Escolha a quantidade de pessoas para hospedar:</td>
+			<td> 
+			<select name="quant_pessoas" id="pessoas">
+				<option value="1">1 pessoa</option>
+				<option value="2">2 pessoas</option>
+			</select>
+		</td>
+	</tr>
+
+	<tr>
+
+		<td>
+			Escolha entre as opçoes de quartos:
+		</td>
+		<td class="opcoes_quartos">
+			<input type="radio" name="tipos_quartos" value="100" id="box1" onclick="exibirValor(1)">Quarto economico - 3 dias. <br>
+			<input type="radio" name="tipos_quartos" value="150" id="box2" onclick="exibirValor(2)">Quarto economico - 5 a 7 dias. <br>
+			<input type="radio" name="tipos_quartos" value="200" id="box3" onclick="exibirValor(3)">Quarto executivo - 3 dias. <br>
+			<input type="radio" name="tipos_quartos" value="250" id="box4" onclick="exibirValor(4)">Quarto executivo - 5 a 7 dias.<br>
+
+		</td>
+
+	
+		
+	</tr>
+	<tr>
+			<td>
+				Escolha a forma de pagamento: 
+			</td>
+
+			<td>
+				<input type="radio" name="pagamento" value="dinheiro">Dinheiro</input><br>
+				<input type="radio" name="pagamento" value="cartao">Cartão de Crédito</input><br>
+				<input type="radio" name="pagamento" value="cheque">Cheque</input><br>
+			</td>
+		</tr>
+		<tr>
+		
+			<tr>
+	<td></td>
+		<td style="color:blue">
+			<p id="subtotal_compra"></p>
+		</td>
+	</tr>
+		</tr>
+	</table>
+</fieldset>
+
+
+<br>
+	<div align="center" id="botoes">
+		<input id="botaoform" type="submit" value="Enviar" name="enviar_dados" align="center" onclick="cadastropronto()" onclick="window.location.reload(true);"></input>
+	</div><br><br><br>
+	
+
+		<footer id="rodape">
+		 <p><b>2006-2018 - Todos os direitos reservados para MHG Hotels e associados.®</b></p>
+			
+		</footer>
+	
+
+
+</body>
+</html>
